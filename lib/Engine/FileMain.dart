@@ -14,7 +14,6 @@ void setDirectory(String path) {
 void streamhelm() {
   print(storage.parent);
   directories.clear();
-
   storage.list().listen((dirs) {
     directories.add(dirs);
   }).onDone(() {

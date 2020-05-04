@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
                             },
                             child: Card(
                               child: ListTile(
-                                title: Text(filelist.data[index].path),
+                                title: Text(filelist.data[index].path.toString().split('/').last),
                               ),
                             ),
                           );
@@ -94,7 +94,7 @@ class _HomeState extends State<Home> {
         ],
         title: Row(
           children: <Widget>[
-            Container(
+            (storage.path == '/storage/emulated/0' || storage.path == '/storage/emulated/0/') ? Container():Container(
               height: 64,
               width: 64,
               child: FlatButton(
@@ -115,7 +115,7 @@ class _HomeState extends State<Home> {
                     color: Colors.white,
                   )),
             ),
-            Container(child: Text(storage.path.split('/').last)),
+            Container(child: Text((storage.path == '/storage/emulated/0' || storage.path == '/storage/emulated/0/') ? 'Root':storage.path.split('/').last)),
           ],
         ),
       );
