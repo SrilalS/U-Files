@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   permission_handler: ^5.0.0+hotfix.4
+  open_file: ^3.0.1
 
 dev_dependencies:
   flutter_test:
